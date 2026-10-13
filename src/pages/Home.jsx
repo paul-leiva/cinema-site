@@ -50,7 +50,7 @@ function Home() {
       setLoading(false)
     }
 
-    setSearchQuery("");
+    //setSearchQuery("");
   }
   
   return (
@@ -70,10 +70,8 @@ function Home() {
       
       {loading ? <div className="loading">Loading...</div> : 
         <div className="movies-grid">
-          {movies.map(
-            (movie) => (
-              movie.title.toLowerCase().startsWith(searchQuery) && (
-                <MovieCard movie={movie} key={movie.id} />)
+          {movies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id} />
           ))}
         </div>
       }
